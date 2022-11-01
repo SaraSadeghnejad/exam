@@ -3,6 +3,7 @@ import { Box, Container, Grid, Tab, Tabs, TextField, Typography } from '@mui/mat
 import React, { useState } from 'react';
 import { Card } from 'reactstrap';
 import { blue, red } from '@mui/material/colors';
+import ChemistryLesson from '../ChemistryLesson';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -46,6 +47,11 @@ function CurrentLesson({}: Props) {
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
       setValue(newValue);
     };
+    const [valueLesson, setValueLesson] = useState(0);
+
+    const handleChangeLesson = (event: React.SyntheticEvent, newValue: number) => {
+      setValueLesson(newValue);
+    };
   
     const TabsContainerWrapper = styled(Box)(
       ({ theme }) => `
@@ -58,11 +64,14 @@ function CurrentLesson({}: Props) {
     
             .MuiTab-root {
                 &.MuiButtonBase-root {
-                    padding: 0;
+                    padding:.7em;
                     margin-right: ${theme.spacing(3)};
                     font-size: ${theme.typography.pxToRem(16)};
                     color: ${theme.colors.alpha.black[50]};
-    
+                    width:auto!important;
+                    border-bottom:none!important;
+                    // display: none!important;
+
                     .MuiTouchRipple-root {
                         display: none;
                     }
@@ -70,6 +79,10 @@ function CurrentLesson({}: Props) {
     
                 &.Mui-selected:hover,
                 &.Mui-selected {
+                  background-color: red;
+                  border-radius:2em;
+
+                  border-bottom:none!important;
                     color: ${theme.colors.alpha.black[100]};
                 }
             }
@@ -87,7 +100,46 @@ function CurrentLesson({}: Props) {
           </Tabs>
         <TabPanel value={value} index={0}>
           <Grid item xs={12}>
-  
+          <Card style={{ margin: '2em', border: 'none!important' }}>
+        <TabsContainerWrapper>
+        <Tabs value={valueLesson} onChange={handleChangeLesson} sx={{ mt: 1 }}    
+          indicatorColor="primary"
+          style={{marginTop: '2em'}}  
+          centered>
+          <Tab label="حسابان" />
+          <Tab label="آمار واحتمال" />
+          <Tab label="ریاضیات گسسته" />
+          <Tab label="شیمی" />
+          <Tab label="فیزیک" />
+        </Tabs>
+        
+        <TabPanel value={value} index={0}>
+          <Grid item xs={12}>
+          <ChemistryLesson />
+          </Grid>
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <Grid item xs={12}>
+
+          </Grid>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <Grid item xs={12}>
+
+          </Grid>
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          <Grid item xs={12}>
+
+          </Grid>
+        </TabPanel>
+        <TabPanel value={value} index={4}>
+          <Grid item xs={12}>
+
+          </Grid>
+        </TabPanel>
+        </TabsContainerWrapper>
+      </Card>
 
           </Grid>
         </TabPanel>

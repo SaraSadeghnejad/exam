@@ -14,8 +14,8 @@ const redirects = {
     return [
    
       {   
-        source: '/Login',
-        destination: '/Login',
+        source: '/fa',
+        destination: '/fa',
         permanent: true
       },
    

@@ -20,6 +20,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import createCache from '@emotion/cache';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { prefixer } from 'stylis';
+import '../src/App.css';
 const clientSideEmotionCache = createEmotionCache();
 
 type NextPageWithLayout = NextPage & {

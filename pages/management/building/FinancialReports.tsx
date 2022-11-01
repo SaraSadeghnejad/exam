@@ -19,7 +19,7 @@ function FinancialReports() {
   return (
     <>
       <Container maxWidth="xl" sx={{ marginTop: '2em' }}>
-        <Card>
+
           <Tabs value={value} onChange={handleChange} centered>
             <Tab label={t('table.Create task')} />
             <Tab label={t('table.Create task')} />
@@ -38,7 +38,6 @@ function FinancialReports() {
               </TabPanel>
             </Grid>
           </Grid>
-        </Card>
       </Container>
     </>
   );

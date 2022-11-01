@@ -1,8 +1,5 @@
 import BuildingsList from '@/components/Building/BuildingsList';
 import CreateBuildingForm from '@/components/Building/CreateBuildingForm';
-import CurrentExam from '@/components/exam/CurrentExam';
-import NextExam from '@/components/exam/NextExam';
-import PreviousExam from '@/components/exam/PreviousExam';
 import SidebarLayout from '@/layouts/SidebarLayout';
 import styled from '@emotion/styled';
 import { Box, Container, Grid, Tab, Tabs, TextField, Typography } from '@mui/material';
@@ -87,29 +84,24 @@ function building({ }: Props) {
   return (
     <>
       <Card style={{ margin: '2em', border: 'none!important' }}>
-
+        <TabsContainerWrapper>
         <Tabs value={value} onChange={handleChange}
           indicatorColor="primary" 
           centered
           style={{marginTop: '2em'}}
           >
-            <Tab label="آزمون های گذشته" />
-            <Tab label="آزمون های جاری" />
-            <Tab label="آزمون های آینده" />
+            <Tab label={t('tabs.List buildings')} />
+            <Tab label={t('tabs.Create building')} />
           </Tabs>
+        </TabsContainerWrapper>
         <TabPanel value={value} index={0}>
           <Grid item xs={12}>
-           <PreviousExam />
+            <BuildingsList />
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={1}>
           <Grid item xs={12}>
-          <CurrentExam />
-          </Grid>
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <Grid item xs={12}>
-          <NextExam />
+            <CreateBuildingForm />
           </Grid>
         </TabPanel>
       </Card>

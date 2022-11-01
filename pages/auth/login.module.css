@@ -1,0 +1,33 @@
+.header_conf_style {
+    text-align: center;
+    font-size: 1.5rem !important;
+}
+
+.header_subtext_style {
+    text-align: center;
+    margin-bottom: 50px !important;
+}
+
+.forget_pass_custom {
+    font-size: 13px !important;
+}
+
+.forget_pass_header {
+    text-align: center;
+    padding-bottom: 50px !important;
+    font-weight: bold;
+    font-size: 1.5rem !important;
+}
+
+.title_text_style {
+    text-align: center;
+    font-size: 1.2rem !important;
+}
+
+
+@media screen and (max-height: 625px) {
+    .logo_image {
+        position: fixed !important;
+
+    }
+}

@@ -47,18 +47,30 @@ function ChemistryLesson({}: Props) {
               </ListItem>
 
               <Collapse in={open} unmountOnExit>
-                <div className='d-flex'>
+                <div className='d-flex '>
+                  <Col>
+                  <ChemistryBoard />
+                  </Col>
+             <Col>
              <ChemistryBoard />
+             </Col>
+             <Col>
              <ChemistryBoard />
-             <ChemistryBoard />
-             <ChemistryBoard />
-             <ChemistryBoard />
+             </Col>
+           <Col>
+           <ChemistryBoard />
+           </Col>
+           <Col>
+           <ChemistryBoard />
+           </Col>
+          
+
+          
+            
              </div>
               </Collapse>
 </Col>  
-         <Col>
-
-          </Col>
+       
          </div>
       </Card>
 

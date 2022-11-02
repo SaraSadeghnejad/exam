@@ -140,7 +140,6 @@ function CurrentLesson({}: Props) {
         </TabPanel>
         </TabsContainerWrapper>
       </Card>
-
           </Grid>
         </TabPanel>
     </div>

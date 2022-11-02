@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 
 export default function ChemistryBoard() {
   return (
-    <Card sx={{ maxWidth: 160 , margin:.5 ,padding:.2 }}>
+    <Card sx={{ width:150 , margin:.5 ,padding:.2 ,height:200}}>
       <CardActionArea>
         <CardMedia
           component="img"

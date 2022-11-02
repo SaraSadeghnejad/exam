@@ -82,8 +82,8 @@ function HeaderSearch() {
   return (
     <>
       <Tooltip arrow title={t('header.Search')}>
-        <IconButton className='text-blue-400 dark:text-white bg-transparent' onClick={handleClickOpen}>
-          <SearchTwoToneIcon className="w-5 h-5 text-blue-500"/>
+        <IconButton className='text-red-500 dark:text-white bg-transparent' onClick={handleClickOpen}>
+          <SearchTwoToneIcon className="w-5 h-5 mainColor"/>
         </IconButton>
       </Tooltip>
 

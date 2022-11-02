@@ -16,6 +16,7 @@ import { styled } from '@mui/material/styles';
 
 import { formatDistance, subDays } from 'date-fns';
 import { useTranslation } from 'react-i18next';
+import { MailIcon } from '@heroicons/react/outline';
 
 const NotificationsBadge = styled(Badge)(
   ({ theme }) => `
@@ -64,9 +65,9 @@ function HeaderNotifications() {
               vertical: 'top',
               horizontal: 'right'
             }}
-            className="w-5 h-5 text-blue-500 bg-transparent"
+            className="w-5 h-5 mainColor bg-transparent"
           >
-            <NotificationsActiveTwoToneIcon />
+       <MailIcon color="action" />
           </NotificationsBadge>
         </IconButton>
       </Tooltip>

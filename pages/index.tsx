@@ -1,8 +1,6 @@
-import ExamsList from '@/components/Exam/ExamsList';
-import CreateExamForm from '@/components/Exam/CreateExamForm';
-import CurrentExam from '@/components/exam/CurrentExam';
-import NextExam from '@/components/exam/NextExam';
-import PreviousExam from '@/components/exam/PreviousExam';
+import CurrentExam from '@/components/Exam/CurrentExam';
+import NextExam from '@/components/Exam/NextExam';
+import PreviousExam from '@/components/Exam/PreviousExam';
 import SidebarLayout from '@/layouts/SidebarLayout';
 import styled from '@emotion/styled';
 import { Box, Container, Grid, Tab, Tabs, TextField, Typography } from '@mui/material';
@@ -10,6 +8,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card } from 'reactstrap';
+import BreadCrumbs from '@/components/BreadCrumbs';
+import GuideBoard from '@/components/Exam/GuideBoard';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -30,7 +30,7 @@ function TabPanel(props: TabPanelProps) {
     >
       {value === index && (
         <Container
-          style={{ padding: '3em', border: 'none!important' }}
+          style={{ padding: '-2em', border: 'none!important' }}
           maxWidth="lg"
         >
           <Typography>{children}</Typography>
@@ -86,12 +86,16 @@ function Exam({ }: Props) {
   const { t } = useTranslation();
   return (
     <>
+    <div className='mt-3 mr-5'>
+    <BreadCrumbs />
+    </div>
+    <GuideBoard />
       <Card style={{ margin: '2em', border: 'none!important' }}>
-
+          
         <Tabs value={value} onChange={handleChange}
           indicatorColor="primary" 
           centered
-          style={{marginTop: '2em'}}
+          style={{marginTop: '0em'}}
           >
             <Tab label="آزمون های گذشته" />
             <Tab label="آزمون های جاری" />

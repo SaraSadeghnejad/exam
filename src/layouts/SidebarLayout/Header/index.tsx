@@ -10,7 +10,8 @@ import {
   useTheme,
   Menu,
   MenuItem,
-  Grid
+  Grid,
+  Button
 } from '@mui/material';
 import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone';
 import { SidebarContext } from 'src/contexts/SidebarContext';
@@ -61,9 +62,12 @@ function Header() {
       >
         <HeaderMenu />
       </Stack>
+   
       <Box display="flex" alignItems="center">
-        <HeaderButtons />
+        <HeaderButtons />   
+        <Button className='buyCredit'>خرید اشتراک</Button>
         <HeaderUserbox />
+ 
         <Box
           component="span"
           sx={{

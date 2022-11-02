@@ -35,7 +35,7 @@ body,html {
     }
 }
 .muirtl-nlrp5c-MuiButtonBase-root-MuiTab-root.MuiButtonBase-root {
-width: 20em !important ;
+width: 29em !important ;
 }
  .muirtl-nlrp5c-MuiButtonBase-root-MuiTab-root{
     width: 5em!important;
@@ -645,9 +645,10 @@ div.MuiBox-root.muirtl-dq7tw2>div>div::-webkit-scrollbar ,div.MuiBox-root.muirtl
 }
 .initial_board{
     width: 100%;
-    margin: 1em ;
+    margin:0 1em ;
     background-color: #E8F0F6;
     padding: 2em;
+    border-top: 1px solid #1263A1!important;
 }
 
 .timer_board{
@@ -673,4 +674,53 @@ border-radius: 10px;
  .muirtl-18cnpzw-MuiTabs-root .MuiTabs-indicator.muirtl-1th7pa1-MuiTabs-indicator{
 display: none!important;
 
+}
+.buyCredit{
+    background: #D51F1F!important;
+    color: #fff !important;
+    line-height: 0.75!important;
+    border-radius: 3px!important;
+}
+.mainColor{
+    color: #F28665;
+    
+}
+body{
+    background-color: #fff!important;
+}
+.guideBoard{
+    background: #FFFFFF;
+box-shadow: inset -1px 3px 3px #D4E2ED!important;
+}
+.watchModal{
+    min-width: 2.5em!important;
+    padding: 1.25em!important;
+    height: 3.6em!important;
+    border-radius: 50%!important;
+    background: #043D69!important;
+    margin: 1em .4em!important;
+    border: 2px solid #fff!important;
+    box-shadow: -1px 2px 2px 0px #00000040;
+
+}
+.downloadPdf{
+    min-width: 2.5em!important;
+    padding: 1.25em!important;
+    height: 3.6em!important;
+    border-radius: 50%!important;
+    margin: 1em .4em!important; 
+    background: #FC7F3A!important;
+    border: 2px solid #fff!important;
+    box-shadow: -1px 2px 2px 0px #00000040;
+}
+.guide-line{
+    color: #054d6b;
+    margin-top: 2.2em;
+}
+.guidePart{
+    color: #007BDA;
+    margin-top: 2.2em;
+}
+.muirtl-nlrp5c-MuiButtonBase-root-MuiTab-root.MuiButtonBase-root{
+    border: 0.4px solid #4182B4;
 }

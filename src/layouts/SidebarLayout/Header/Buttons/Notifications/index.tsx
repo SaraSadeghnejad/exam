@@ -67,7 +67,7 @@ function HeaderNotifications() {
             }}
             className="w-5 h-5 mainColor bg-transparent"
           >
-       <MailIcon color="action" />
+       <img src="/mail.png" />
           </NotificationsBadge>
         </IconButton>
       </Tooltip>

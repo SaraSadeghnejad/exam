@@ -89,7 +89,17 @@ function HeaderUserbox() {
       <UserBoxButton color="secondary" ref={ref} onClick={handleOpen} sx={{direction:"initial"}}>
        
         <div style={{width:"3.5em", margin:"0 1em"}}>
-        <CircularProgressbarWithChildren value={66} strokeWidth={5}>
+        <CircularProgressbarWithChildren value={66} strokeWidth={5} styles={{ path: {
+      // Path color
+      stroke: `rgba(0, 100, 0,.5)`,
+      // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+      strokeLinecap: 'butt',
+      // Customize transition animation
+      transition: 'stroke-dashoffset 0.5s ease 0s',
+      // Rotate the path
+      transform: 'rotate(0.25turn)',
+      transformOrigin: 'center center',
+    },}}>
      <Avatar variant="rounded" alt={user.name} src={user.avatar} className="mx-2" sx={{borderRadius:"50%"}}  />
        
       </CircularProgressbarWithChildren>
@@ -105,7 +115,7 @@ function HeaderUserbox() {
           </UserBoxText>
         </Hidden>
         <Hidden smDown>
-          <ExpandMoreTwoToneIcon sx={{ ml: 1 }} />
+          <ExpandMoreTwoToneIcon sx={{ ml: 1,color: ' #F28665'}} />
         </Hidden>
       </UserBoxButton>
       <Popover

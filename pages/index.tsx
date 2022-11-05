@@ -57,8 +57,7 @@ function Exam({ }: Props) {
   const TabsContainerWrapper = styled(Box)(
     ({ theme }) => `
           .MuiTabs-indicator {
-              min-height: 4px;
-              height: 4px;
+            
               box-shadow: none;
               border: 0;
           }
@@ -68,8 +67,12 @@ function Exam({ }: Props) {
                   padding: 0;
                   margin-right: ${theme.spacing(3)};
                   font-size: ${theme.typography.pxToRem(16)};
-                  color: ${theme.colors.alpha.black[50]};
-  
+                  color: #4182B4;
+                  min-height:48px;
+                  height: 48px;
+                  font-weight: 400;
+                  border-bottom: 1px solid #1263A1;
+                  border-radius: 10px 10px 0px 0px;
                   .MuiTouchRipple-root {
                       display: none;
                   }
@@ -77,7 +80,11 @@ function Exam({ }: Props) {
   
               &.Mui-selected:hover,
               &.Mui-selected {
-                  color: ${theme.colors.alpha.black[100]};
+                  color: #fff;
+                  background: #1263A1;
+                  border-bottom: 1px solid #1263A1;
+                  border-radius: 10px 10px 0px 0px;
+                  font-weight: bold;
               }
           }
     `
@@ -91,7 +98,7 @@ function Exam({ }: Props) {
     </div>
     <GuideBoard />
       <Card style={{ margin: '2em', border: 'none!important' }}>
-          
+      <TabsContainerWrapper>
         <Tabs value={value} onChange={handleChange}
           indicatorColor="primary" 
           centered
@@ -116,6 +123,7 @@ function Exam({ }: Props) {
           <NextExam />
           </Grid>
         </TabPanel>
+        </TabsContainerWrapper>
       </Card>
     </>
   );

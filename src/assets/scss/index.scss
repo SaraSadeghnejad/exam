@@ -645,7 +645,8 @@ div.MuiBox-root.muirtl-dq7tw2>div>div::-webkit-scrollbar ,div.MuiBox-root.muirtl
 }
 .initial_board{
     width: 100%;
-    margin:0 1em ;
+    margin:0 ;
+    margin-bottom: 1em;
     background-color: #E8F0F6;
     padding: 2em;
     border-top: 1px solid #1263A1!important;
@@ -724,3 +725,9 @@ box-shadow: inset -1px 3px 3px #D4E2ED!important;
 .muirtl-nlrp5c-MuiButtonBase-root-MuiTab-root.MuiButtonBase-root{
     border: 0.4px solid #4182B4;
 }
+// .muirtl-nlrp5c-MuiButtonBase-root-MuiTab-root.MuiButtonBase-root{
+//     min-width: 28em!important;
+//     margin: 0 .7em!important;
+// }
+
+      

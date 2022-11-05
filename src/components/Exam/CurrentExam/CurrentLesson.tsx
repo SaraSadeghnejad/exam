@@ -58,20 +58,25 @@ function CurrentLesson({}: Props) {
             .MuiTabs-indicator {
                 min-height: 4px;
                 height: 4px;
-                box-shadow: none;
-                border: 0;
+                background: #FFFFFF;
+border: 1.5px solid #1263A1;
+box-shadow: -1px 2px 0px #B8D1E3;
+             
             }
     
             .MuiTab-root {
                 &.MuiButtonBase-root {
                     padding:.7em;
                     margin-right: ${theme.spacing(3)};
-                    font-size: ${theme.typography.pxToRem(16)};
-                    color: ${theme.colors.alpha.black[50]};
-                    width:auto!important;
-                    border-bottom:none!important;
-                    // display: none!important;
-
+                    font-size: ${theme.typography.pxToRem(15)};
+                    border: 1.5px solid #1263A1!important;
+                    box-shadow: -1px 2px 0px #B8D1E3;                   
+                     width:10em!important;
+                     border-radius:2em;
+                   
+                    background: #fff;
+                 
+                    box-shadow: -1px 2px 0px #B8D1E3;
                     .MuiTouchRipple-root {
                         display: none;
                     }
@@ -79,11 +84,12 @@ function CurrentLesson({}: Props) {
     
                 &.Mui-selected:hover,
                 &.Mui-selected {
-                  background-color: red;
+                   background: linear-gradient(0deg, #5A92BE, #5A92BE),
+                  linear-gradient(0deg, #FFFFFF, #FFFFFF);
                   border-radius:2em;
-
+                  border: 0.951082px solid #FFFFFF;
                   border-bottom:none!important;
-                    color: ${theme.colors.alpha.black[100]};
+                    color: #fff;
                 }
             }
       `

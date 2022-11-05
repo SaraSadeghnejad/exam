@@ -10,7 +10,9 @@ type Props = {}
 const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a complete state
-      return <h1>Helloooo</h1>
+      return <span>
+         <span className="timer_board">0</span>:<span className="timer_board">0</span>:<span className="timer_board">0</span>
+      </span>
     } else {
       // Render a countdown
       return (
